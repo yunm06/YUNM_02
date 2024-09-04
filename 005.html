@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>숫자 맞추기 게임</title>
+    <script>
+        let computerNumber = 53;
+        let nGuesses=0;
+        function guess(){
+            let result="";     //결과, 힌트 메시지를 기록하는 변수//
+             let number = parseInt(document.getElementById("user").value);
+             nGuesses++;
+
+             if(number == computerNumber) { result= "정답입니다" ;}
+             else if (number > computerNumber ){
+                result = "더 큰 수 입력하세요." ;}
+             else result= "더 작은 수를 입력하세요." ;
+             document.getElementById("result").value=result;
+             document.getElementById("guesses").value=nGuesses;
+             return true;
+        }
+    </script>
+</head>
+<body>
+    <h2>숫자 맞추기 게임</h2>
+    이 게임은 컴퓨터가 생성한 숫자를 맞추는 게임입니다. <br>
+    숫자는 1부터 100 사이에 있습니다. 숫자를 추측해서 아래 박스에 입력해보세요.
+    <form action="">
+        숫자 : <input type="text" id="user" size="5">
+        <input type="button" value="확인" onclick="guess();"><br>
+        추측횟수 : <input type="text" id="guesses" size="5">
+        힌트 : <input type="text" id="result" size="40">
+    </form>
+</body>
+</html>

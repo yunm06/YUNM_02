@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+            let date= new Date();
+            let time=date.getHours();
+            let greeting;
+            if(time<12){
+                greeting="Good Morning";
+                document.write(greeting+"<br>");
+            }
+
+            let date2= new Date();
+            let time2=date2.getHours();
+            let greeting2;
+            if(time2<12){
+                greeting2="Good Morning2";
+                document.write(greeting2+"<br>");
+            }
+            else{
+                greeting2="Good afterneoon";
+                document.write(greeting2+"<br>");
+            }
+
+            let date3= new Date();
+            let time3=date3.getMonth();
+            let greeting3;
+            if(time3<5){
+                greeting3="상반기입니다.";
+                document.write(greeting3+"<br>");
+            }
+            else{
+                greeting3="하반기입니다.";
+                document.write(greeting3+"<br>");
+            }
+
+            let temper=prompt("온도를 입력하세요:", "-20 ~ 40 사이의 정수로");
+            temper=parseInt(temper);
+            if( temper<=0){
+                alert("많이 춥습니다. 장갑, 목도리를 챙기세요.");
+            }
+
+            else if( temper<=10){
+                alert("영상이지만 따뜻한 옷을 입으세요");
+            }
+
+            else if(temper<=20){
+                alert("가벼운 옷차림을 하세요");
+            }
+
+            else{
+                alert("더위에 대비하세요")
+            }
+
+            let date1= new Date();
+            let time1= date.getMonth();
+            if( time1<=2){
+                alert("1분기입니다");
+            }
+
+            else if( time1<=5){
+                alert("2분기입니다");
+            }
+
+            else if(time1<=9){
+                alert("3분기입니다");
+            }
+
+            else{
+                alert("4분기입니다")
+            }
+        
+
+            let grade=prompt("성적을 입력하시오:", "A-D사이의 문자로");
+                switch(grade){
+                    case 'A': alert("최고 성적입니다. 잘했어요.");
+                        break;
+                        
+                    case 'B': alert("좋은 성과입니다.");
+                        break;
+
+                    case 'C': alert("조금만 더 해봅시다.");
+                        break;
+
+                    case 'D': alert("재수강해야 합니다.");
+                        break;
+                        "<br>";
+                }
+
+            let j=0
+            while( j < 10){
+                document.write("카운터 : "+j+"<br>");
+                j ++;
+            }
+
+            for(let j=0; j<10; j++)
+            {
+                document.write("카운터 : <br>")
+            }
+
+            for(let j=1; j<7; j++){
+                document.write("<h"+j+">header"+j+"</h"+j+">")
+            }
+</script>
+</body>
+</html>

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li{list-style: none;}
+
+        #main_header{
+            width: 960px;
+            height: 160px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        #main_haeder>#title {
+            position: absolute;
+            left: 20px;
+            top: 30px;
+        }
+
+        #main_header>#main_gnb {
+            position: absolute;
+            right: 0;
+            top: 30px;
+        }
+
+        #main_header>#main_lnb {
+            position: absolute;
+            right: 0;
+            bottom: 10px;
+        }
+
+
+        #main_gnb>ul{
+            overflow: hidden;
+        }
+        #main_gnb > ul > li{
+            float: left;
+        }
+
+        #main_lnb>ul{
+            overflow: hidden;
+        }
+        #main_lnb > ul > li{
+            float: left;
+        }
+
+        #main_gnb> ul > li > a {
+            display: block;
+            padding: 10px 20px;
+            border: 1px solid black;
+        }
+
+        #main_gnb > ul > li:first-child > a {
+            border-radius: 10px 0 0 10px;
+        }
+        #main_gnb > ul > li:first-child > a {
+            border-radius: 0 10px 10px 0;
+        }
+
+        #main_lnb> ul > li > a {
+            display: block;
+            padding: 10px 20px;
+            border: 1px solid black;
+        }
+
+        #main_lnb > ul > li:first-child > a {
+            border-radius: 10px 0 0 10px;
+        }
+        #main_lnb > ul > li:first-child > a {
+            border-radius: 0 10px 10px 0;
+        }
+
+
+        #content {
+            width: 960px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        #content> #main_section{
+            width: 750px;
+            float: left;
+        }
+        #content > #main_aside {
+            width: 200px;
+            float: right;
+        }
+
+        #main_section > #main_article {
+            margin: 10px;
+            padding: 20px;
+            border: 1px solid black;
+        }
+
+        #main_section>article>div.combine{
+            margin-top: 5px;
+            overflow: hidden;
+        }
+
+        #main_section>article>div>#normalpic{
+            margin-right: 10px;
+            width: 100px;
+            float: left;
+        }
+
+        #main_section>article>div>#normalart{
+           width: 460px;
+           float: right; 
+        }
+
+        input:nth-of-type(1){display: none;}
+        input:nth-of-type(1) ~div:nth-of-type(1) {display: none;}
+        input:nth-of-type(1):checked ~ div:nth-of-type(1){display: block;}
+
+        input:nth-of-type(2){display: none;}
+        input:nth-of-type(2) ~div:nth-of-type(2) {display: none;}
+        input:nth-of-type(2):checked ~ div:nth-of-type(2){display: block;}
+
+        
+        section.buttons {overflow: hidden;}
+        section.buttons> label {
+            display: block;
+            float: left;
+
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            border: 1px solid black;
+
+            background: black;
+            color: white;
+        }
+
+        input:nth-of-type(1):checked ~ section.buttons > label:nth-last-of-type(1){
+            background: white;
+            color: black;
+        }
+
+        input:nth-of-type(2):checked ~ section.buttons > label:nth-last-of-type(2){
+            background: white;
+            color: black;
+        }
+        
+        #main_aside{position: relative;}
+        input:nth-of-type(1):checked ~div:nth-of-type(1){display: block; position: absolute; left: 10px;}
+        input:nth-of-type(2):checked ~div:nth-of-type(2){display: block; position: absolute; left: 110px;}
+
+        #main_footer{
+            width: 960px;
+            margin: 0 auto;
+            margin-bottom: 10px;
+
+            box-sizing: border-box;
+            padding: 10px;
+            border: 1px solid black;
+
+            text-align: center;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <header id="main_header">
+        <div id="title">
+        대한민국 헌법 <br>
+        HTML5+CSS3 Basic
+        </div id="content">
+
+        <nav id="main_gnb">
+            <ul>
+                <li><a href="#">Web</a></li>
+                <li><a href="#">Mobile</a></li>
+                <li><a href="#">Game</a></li>
+                <li><a href="#">Simulation</a></li>
+                <li><a href="#">Data</a></li>
+            </ul>
+        </nav>
+
+        <nav id="main_lnb">
+            <ul>
+                <li><a href="#">HTML5</a></li>
+                <li><a href="#">CSS3</a></li>
+                <li><a href="#">JavaScript</a></li>
+                <li><a href="#">jQuery</a></li>
+                <li><a href="#">Node.js</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="content">
+        <section id="main_section">
+            <article id="main_article">
+                <h1>
+                    1.전문
+                </h1>
+                <div id="combine">
+                    <p id="normalart">
+                        유구한 역사와 전통에 빛나는 우리 대한국민은 3ㆍ1운동으로 건립된 대한민국임시정부의 법통과 불의에 항거한 4ㆍ19민주이념을 계승하고, 
+                        조국의 민주개혁과 평화적 통일의 사명에 입각하여 정의ㆍ인도와 동포애로써 민족의 단결을 공고히 하고, 모든 사회적 폐습과 불의를 타파하며, 
+                        자율과 조화를 바탕으로 자유민주적 기본질서를 더욱 확고히 하여 정치ㆍ경제ㆍ사회ㆍ문화의 모든 영역에 있어서 각인의 기회를 균등히 하고, 
+                        능력을 최고도로 발휘하게 하며, 자유와 권리에 따르는 책임과 의무를 완수하게 하여, 안으로는 국민생활의 균등한 향상을 기하고 밖으로는 
+                        항구적인 세계평화와 인류공영에 이바지함으로써 우리들과 우리들의 자손의 안전과 자유와 행복을 영원히 확보할 것을 다짐하면서 1948년 7월 12일에 제정되고 
+                        8차에 걸쳐 개정된 헌법을 이제 국회의 의결을 거쳐 국민투표에 의하여 개정한다. -1987년 10월 29일-
+                    </p>
+                    <img id="normalpic" src="./Images/728A1626_1.jpg" alt="">
+                </div>
+                
+            </article>
+
+            <article id="main_article">
+                <h1>2.총강</h1>
+                <p>
+                    제1조 
+                    ①대한민국은 민주공화국이다.
+                    ②대한민국의 주권은 국민에게 있고, 모든 권력은 국민으로부터 나온다.
+
+                    제2조 
+                    ①대한민국의 국민이 되는 요건은 법률로 정한다.
+                    ②국가는 법률이 정하는 바에 의하여 재외국민을 보호할 의무를 진다.
+
+                    제3조 
+                    대한민국의 영토는 한반도와 그 부속도서로 한다.
+
+                    제4조 
+                    대한민국은 통일을 지향하며, 자유민주적 기본질서에 입각한 평화적 통일정책을 수립하고 이를 추진한다.
+
+                    제5조 
+                    ①대한민국은 국제평화의 유지에 노력하고 침략적 전쟁을 부인한다.
+                    ②국군은 국가의 안전보장과 국토방위의 신성한 의무를 수행함을 사명으로 하며, 그 정치적 중립성은 준수된다.
+
+                    제6조 
+                    ①헌법에 의하여 체결ㆍ공포된 조약과 일반적으로 승인된 국제법규는 국내법과 같은 효력을 가진다.
+                    ②외국인은 국제법과 조약이 정하는 바에 의하여 그 지위가 보장된다.
+
+                    제7조 
+                    ①공무원은 국민전체에 대한 봉사자이며, 국민에 대하여 책임을 진다.
+                    ②공무원의 신분과 정치적 중립성은 법률이 정하는 바에 의하여 보장된다.
+
+                    제8조 
+                    ①정당의 설립은 자유이며, 복수정당제는 보장된다.
+                    ②정당은 그 목적ㆍ조직과 활동이 민주적이어야 하며, 국민의 정치적 의사형성에 참여하는데 필요한 조직을 가져야 한다.
+                    ③정당은 법률이 정하는 바에 의하여 국가의 보호를 받으며, 국가는 법률이 정하는 바에 의하여 정당운영에 필요한 자금을 보조할 수 있다.
+                    ④정당의 목적이나 활동이 민주적 기본질서에 위배될 때에는 정부는 헌법재판소에 그 해산을 제소할 수 있고, 정당은 헌법재판소의 심판에 의하여 해산된다.
+
+                    제9조 
+                    국가는 전통문화의 계승ㆍ발전과 민족문화의 창달에 노력하여야 한다
+                </p>
+            </article>
+            
+            <article id="main_article">
+                <h1>국민의 권리와 의무</h1>
+                <p>
+                    제10조 
+                    모든 국민은 인간으로서의 존엄과 가치를 가지며, 행복을 추구할 권리를 가진다. 국가는 개인이 가지는 불가침의 기본적 인권을 확인하고 이를 보장할 의무를 진다.
+                
+                    제11조
+                    ①모든 국민은 법 앞에 평등하다. 누구든지 성별ㆍ종교 또는 사회적 신분에 의하여 정치적ㆍ경제적ㆍ사회적ㆍ문화적 생활의 모든 영역에 있어서 차별을 받지 아니한다.
+                    ②사회적 특수계급의 제도는 인정되지 아니하며, 어떠한 형태로도 이를 창설할 수 없다.
+                    ③훈장등의 영전은 이를 받은 자에게만 효력이 있고, 어떠한 특권도 이에 따르지 아니한다.
+                
+                    제12조 
+                    ①모든 국민은 신체의 자유를 가진다. 누구든지 법률에 의하지 아니하고는 체포ㆍ구속ㆍ압수ㆍ수색 또는 심문을 받지 아니하며, 
+                    법률과 적법한 절차에 의하지 아니하고는 처벌ㆍ보안처분 또는 강제노역을 받지 아니한다.
+                    ②모든 국민은 고문을 받지 아니하며, 형사상 자기에게 불리한 진술을 강요당하지 아니한다.
+                    ③체포ㆍ구속ㆍ압수 또는 수색을 할 때에는 적법한 절차에 따라 검사의 신청에 의하여 법관이 발부한 영장을 제시하여야 한다. 
+                    다만, 현행범인인 경우와 장기 3년 이상의 형에 해당하는 죄를 범하고 도피 또는 증거인멸의 염려가 있을 때에는 사후에 영장을 청구할 수 있다.
+                    ④누구든지 체포 또는 구속을 당한 때에는 즉시 변호인의 조력을 받을 권리를 가진다. 
+                    다만, 형사피고인이 스스로 변호인을 구할 수 없을 때에는 법률이 정하는 바에 의하여 국가가 변호인을 붙인다.
+                    ⑤누구든지 체포 또는 구속의 이유와 변호인의 조력을 받을 권리가 있음을 고지받지 아니하고는 체포 또는 구속을 당하지 아니한다. 
+                    체포 또는 구속을 당한 자의 가족등 법률이 정하는 자에게는 그 이유와 일시ㆍ장소가 지체없이 통지되어야 한다.
+                    ⑥누구든지 체포 또는 구속을 당한 때에는 적부의 심사를 법원에 청구할 권리를 가진다.
+                    ⑦피고인의 자백이 고문ㆍ폭행ㆍ협박ㆍ구속의 부당한 장기화 또는 기망 기타의 방법에 의하여 자의로 진술된 것이 아니라고 인정될 때 
+                    또는 정식재판에 있어서 피고인의 자백이 그에게 불리한 유일한 증거일 때에는 이를 유죄의 증거로 삼거나 이를 이유로 처벌할 수 없다.
+                
+                    제13조 
+                    ①모든 국민은 행위시의 법률에 의하여 범죄를 구성하지 아니하는 행위로 소추되지 아니하며, 동일한 범죄에 대하여 거듭 처벌받지 아니한다.
+                    ②모든 국민은 소급입법에 의하여 참정권의 제한을 받거나 재산권을 박탈당하지 아니한다.
+                    ③모든 국민은 자기의 행위가 아닌 친족의 행위로 인하여 불이익한 처우를 받지 아니한다
+
+                    제14조 
+                    모든 국민은 거주ㆍ이전의 자유를 가진다.
+
+                    제15조 
+                    모든 국민은 직업선택의 자유를 가진다.
+
+                    제16조
+                    모든 국민은 주거의 자유를 침해받지 아니한다. 주거에 대한 압수나 수색을 할 때에는 검사의 신청에 의하여 법관이 발부한 영장을 제시하여야 한다.
+
+                    제17조 
+                    모든 국민은 사생활의 비밀과 자유를 침해받지 아니한다.
+
+                    제18조 
+                    모든 국민은 통신의 비밀을 침해받지 아니한다.
+
+                    제19조
+                    모든 국민은 양심의 자유를 가진다.
+
+                    제20조 
+                    ①모든 국민은 종교의 자유를 가진다.
+                    ②국교는 인정되지 아니하며, 종교와 정치는 분리된다.
+
+                </p>
+            </article>
+        </section>
+
+        <aside id="main_aside">
+            <input id="first" type="radio" name="tab" checked="checked">
+            <input id="second" type="radio" name="tab">
+        
+            <section class="buttons">
+                <label for="first">메인</label> <label for="second">재미끼리</label>
+            </section>
+
+            <div>
+                <ul>
+                    <li>
+                        <a href="main.html" target="_self">메인페이지로</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <ul>
+                    <li><a href="시간.html" target="_self">시간</a></li>
+                    <li><a href="성적.html" target="_self">성적</a></li>
+                    <li><a href="반복.html" target="_self">반복</a></li>
+                    <li><a href="추천도서.html" target="_self">추천도서</a></li>
+                </ul>
+            </div>
+
+
+            <h1>부칙</h1>
+            <p>
+                제1조 이 헌법은 1988년 2월 25일부터 시행한다. 다만, 이 헌법을 시행하기 위하여 필요한 법률의 제정ㆍ개정과 이 헌법에 의한 대통령 및 국회의원의 선거 기타 이 헌법시행에 관한 준비는 이 헌법시행 전에 할 수 있다.
+
+                제2조 ①이 헌법에 의한 최초의 대통령선거는 이 헌법시행일 40일 전까지 실시한다.
+                
+                ②이 헌법에 의한 최초의 대통령의 임기는 이 헌법시행일로부터 개시한다.
+                
+                제3조 ①이 헌법에 의한 최초의 국회의원선거는 이 헌법공포일로부터 6월 이내에 실시하며, 이 헌법에 의하여 선출된 최초의 국회의원의 임기는 국회의원선거후 이 헌법에 의한 국회의 최초의 집회일로부터 개시한다.
+                
+                ②이 헌법공포 당시의 국회의원의 임기는 제1항에 의한 국회의 최초의 집회일 전일까지로 한다.
+                
+                제4조 ①이 헌법시행 당시의 공무원과 정부가 임명한 기업체의 임원은 이 헌법에 의하여 임명된 것으로 본다. 다만, 
+                이 헌법에 의하여 선임방법이나 임명권자가 변경된 공무원과 대법원장 및 감사원장은 이 헌법에 의하여 후임자가 선임될 때까지 그 직무를 행하며, 
+                이 경우 전임자인 공무원의 임기는 후임자가 선임되는 전일까지로 한다.
+                
+                ②이 헌법시행 당시의 대법원장과 대법원판사가 아닌 법관은 제1항 단서의 규정에 불구하고 이 헌법에 의하여 임명된 것으로 본다.
+                
+                ③이 헌법 중 공무원의 임기 또는 중임제한에 관한 규정은 이 헌법에 의하여 그 공무원이 최초로 선출 또는 임명된 때로부터 적용한다.
+                
+                제5조 이 헌법시행 당시의 법령과 조약은 이 헌법에 위배되지 아니하는 한 그 효력을 지속한다.
+                
+                제6조 이 헌법시행 당시에 이 헌법에 의하여 새로 설치될 기관의 권한에 속하는 직무를 행하고 있는 기관은 이 헌법에 의하여 새로운 기관이 설치될 때까지 존속하며 그 직무를 행한다.</p>
+        </aside>
+    </div>
+
+
+    <footer id="main_footer">
+        <h3>html + css basic</h3>
+        <address>website Layout Basic</address>
+    </footer>
+</body>
+</html>

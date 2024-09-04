@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <table border="1">
+        <tr>
+            <td>섭씨온도</td>
+            <td>화씨온도</td>
+        </tr>
+   </table>
+
+   <h2>구구단표</h2>
+   <table border="1" width="30%">
+    <script>
+         for(let i=3 ; i<=9 ; i++){
+                document.write("<tr>");
+                document.write("<td>"+i+"</td>");
+
+                for(let j=6 ; j<=9 ; j++){
+                    document.write("<td>"+ i*j + "</td>")
+                }
+
+                for(let j=9 ; j<=9 ; j++){
+                    document.write("<td>"+ i*j + "</td>")
+                }
+                document.write("</tr>")
+            }
+    </script>
+   </table>
+
+
+   <img id="image" src="./Images/예제1.png" width="220" height="200">
+   <script>
+    function changeImage1(){
+        document.getElementById("image").src="./Images/예제2.jfif";
+    }
+   </script>
+    <input type="button" onclick="changeImage1()" value="눌러보세요"/>
+    <br>
+
+    <img id="image2" src="./Images/예제1.png" width="220" height="200">
+    <script>
+        let i=0;
+     function changeImage(){
+        if(i==0){
+            document.getElementById("image2").src="./Images/예제2.jfif";
+            i=1;
+     }
+     else{
+        document.getElementById("image2").src="./Images/예제1.png";
+        i=0;
+    }}
+    </script>
+     <input type="button" onclick="changeImage()" value="눌러보세요"/>
+    <br>
+
+    <p id="p1">안녕하세요! 반갑습니다.</p>
+    <script>
+        function changeStyle(){
+            document.getElementById("p1").style.color="red";
+            document.getElementById("p1").style.fontStyle="italic";
+        }
+    </script>
+    <input type="button" onclick="changeStyle()" value="눌러보세요"/>
+    <br>
+
+
+    <img src="./Images/예제1.png" id="best1" onmouseover="mouseover()" onmouseleave="mouseleave()">
+    <script>
+        function mouseover (){
+            document.getElementById("best1").src="./Images/예제2.jfif"
+
+        }
+        function mouseleave (){
+            document.getElementById("best1").src="./Images/예제1.png"
+
+        }        
+    </script>
+
+
+    <script>
+        let temper=prompt("100이하의 정수를 입력하세요:", "100");
+            temper=parseInt(temper);
+            if( temper>=101){
+                alert("정수"+input+"는 100이하의 정수가 아닙니다.");
+            }
+
+            else if( temper>=99){
+                alert("정수입니다.");
+            }
+
+            for( ; ; ){
+                document.write("<tr><td>"+cel+"</td><td>"
+                    +((cel*9.0/5)+32)+"</td></tr>");
+            }
+
+
+            for(let i=3 ; i<=9 ; i++){
+                document.write("<tr>");
+                document.write("<td>"+i+"</td>");
+
+                for(let j=6 ; j<=9 ; j++){
+                    document.write("<td>"+ i*j + "</td>")
+                }
+
+                for(let j=9 ; j<=9 ; j++){
+                    document.write("<td>"+ i*j + "</td>")
+                }
+                document.write("</tr>")
+            }
+    </script>
+</body>
+</html>
